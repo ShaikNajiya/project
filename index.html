@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  
+   
+    <style>
+      @media screen and (max-width:360px) {
+        header {
+        width:100%;
+        background-color: white;
+        height: 8vh;
+        transform: translate(0px,7px);
+       overflow: hidden;
+        
+      }
+      .main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap:10px;
+      }
+      .villa{
+        font-size: 15px;
+      }
+      .main1{ 
+        
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly; 
+        gap:10px;
+        font-size: 10px;
+      }
+      .head1{
+        text-decoration: none;
+        color: #050404;
+      }
+      /* .su_main{ 
+        height: 4vh;
+        width:100%;
+        border-radius: 40px;
+        display: flex; 
+        gap:1px;
+        align-items: center;
+        background-color: #050404;
+      } */
+      
+      /* section*/
+      .hero {
+        background-image: url("./html/banner-01.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        width:100%;
+        position: relative;
+        color: white;
+        display: flex; 
+        gap:10px;
+       
+      }
+      .overlay {
+        position: absolute;
+      
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .hero-text {
+        transform: translateY(15vh);
+      }
+      .location {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #ff4b42;
+
+        height: 10%;
+        width: 55%;
+
+        display: flex;
+        align-items: center;
+
+        font-weight: bold;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .section1 {
+        
+        width: 100%;
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:25px;
+
+        transform: translate(0px, 30px);
+        
+      }
+      .image {
+       
+        width: 80vw;
+        height: 50vh;
+        box-shadow: 0px 0px 10px;
+      }
+            
+      .featured {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      #sea_view{font-size: 30px;}
+      .box {
+        width: 80vw;
+        box-shadow: 0px 0px 5px;
+        display: flex;
+        flex-direction: column;
+       
+        gap: 15px;
+      }
+       
+      .info {
+        width: 80vw;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        align-content: space-around;
+
+        box-shadow: 0px 0px 10px;
+       
+      }
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        transform: translate(0px, 15px);
+      }
+      .section2{
+        height:40vh;
+        width:100%;
+      }
+      .section21 {
+        height: 40vh;
+        width: 100%;
+        background-image: url(./html/video-bg.jpg);
+        transform: translate(0px, 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+      }
+      .view{
+        transform: translate(0px,40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+       align-items: center;
+        row-gap: 10px;
+      }
+      .image1{
+        transform: translate(0px,20px);
+        height:30vh;
+        width:60vw;
+       
+      }
+      .three_box{
+      height:50vh;
+      width:100%;
+      transform:translateY(90px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      }
+      .t_box{
+      height:10vh;
+      width:70vw;
+      background-color: #fa9a95;
+      border:1px solid;
+       border-radius: 20px;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+
+      }
+      .t_col{
+      display:flex;
+      flex-direction: column;
+      gap:5px;}
+     .section3 {
+        width: 100%;
+        height: 85vh;
+        background-color: rgb(253, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 30px;
+        transform: translateY(90px);
+       
+      }
+      .sec31 {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+       
+       
+      }
+      .bestdeal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .button1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+       
+      }
+      .b_button{
+        height:5vh;
+      }
+      .sec32 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: space-around;
+        align-items: center;
+        gap:20px;
+        transform: translateY(20px);
+      }
+      .sec321 {
+        width: 80vw;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        box-shadow: 0px 0px 10px;
+        overflow: hidden;
+        border-radius: 5%;
+      }
+      .item1 {
+        width:80vw;
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+      }
+      .deal_img{
+        height:50vh;
+        width:80vw;
+        border-radius: 5%;
+        box-shadow: 0px 0px 10px;
+      }
+      .text2 {
+        width: 80vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+       
+      }
+      .su{
+        height: 4vh;
+        width:100%;
+        border-radius: 40px;
+        display: flex; 
+        gap:15px;
+        align-items: center;
+        background-color: #050404;
+      }
+      .su1{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df150b;
+        border: 1px solid;
+        border-radius: 40px;
+      }
+      .su2{
+        height:100%;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center ;
+      }
+      .section4{
+        height:270vh;
+        width:100%;
+        border:1px solid rgb(255, 255, 255);
+        transform: translate(0px,125vh);
+      }
+      .sec41{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap:10px;
+      }
+      .sec42{
+      transform: translateY(20px);
+      display: flex;
+      background-color: rgb(237, 249, 249);
+      flex-direction: column;
+      gap:20px;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .sec42_1{
+      height:60vh;
+      width:80vw;
+     border-radius: 10px;
+      display:flex;
+      flex-direction: column;
+      align-content: space-around;
+      justify-content: space-around;
+       box-shadow: 0px 0px 20px;
+       gap:1px;
+     
+      
+    }
+    .sec42_11{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    .img4{
+     
+      height:100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .schedule{
+      height: 5vh;
+      width:50%; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    .luxury{
+        height: 4vh;
+        width:30vw;
+        border: 1px solid black; 
+        text-align: center; 
+        background-color: #ff4b42; 
+        border-radius: 50px ; 
+        display: flex;  
+        justify-content: space-around;
+        align-items: center;
+    }
+    .section5{
+      height:80vh;
+      width:100%;
+      transform: translate(0vw,255vh);
+    }
+    .bg_img{
+      height:50%;
+      width:100%;
+      background-image: url(./html/contact-bg.jpg);
+    }
+      
+    .contact{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(5vh);
+    }
+    .f_row{
+      display:flex;
+      width:100%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap:20px;
+      
+    }
+   
+     
+    .f_col{
+
+      display:flex;
+      flex-direction: column;
+      align-content: space-between;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(10vh);
+    }
+    .iframe1{
+      height:70vh;
+      width:70vw;
+      border-radius: 10%;
+    }
+    .main_row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* justify-content: space-around; */
+      gap:20px;
+      Width:80vw;
+    }
+    
+    .f_row1{
+      display: flex;
+      width:80vw;
+      height:10vh;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid beige;
+      gap:10px;
+      box-shadow: 0px 0px 10px;
+      /* border-radius: 40px; */
+    }
+    .f_col1{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap:4px;
+     
+    }
+    .form1{
+    border:1px solid black;
+    transform: translateY(10vh);
+    height:70vh;
+    width:80vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    box-shadow: 0px 0px 10px;
+    border-radius: 5%;
+    }
+    .input_text{
+      height: 7vh; width:60vw; background-color: rgb(237, 245, 245);  border-radius: 40px;
+    }
+    .schedule1{
+      height: 5vh;
+      width:100%; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    footer{
+      height:10vh;
+      width:100%;
+      border:1px solid black;
+      transform: translate(0px,370vh);
+      background-color: #201e1e;
+      color: #ece7e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+}
+    
+      @media screen and (min-width:361px) and (max-width:768px){
+        header {
+        width:100%;
+        background-color: white;
+        height: 8vh;
+        transform: translate(0px,7px);
+       overflow: hidden;
+        
+      }
+      .main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap:10px;
+      }
+      .villa{
+        font-size: 20px;
+      }
+      .main1{ 
+       
+        display:flex;
+        align-items: center;
+        gap:20px;
+        font-size: 15px;
+      }
+      .head1{
+        text-decoration: none;
+        color: #050404;
+      }
+      .su_main{ 
+        height: 4vh;
+        width:100%;
+        border-radius: 40px;
+        display: flex; 
+        gap:5px;
+        align-items: center;
+        background-color: #050404;
+      }
+      .su_1{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df150b;
+        border: 1px solid;
+        border-radius: 40px;
+      }
+      .su_2{
+        height:100%;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center ;
+      }
+      .hero {
+        background-image: url("./html/banner-01.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        width:100%;
+        position: relative;
+        color: white;
+        display: flex; 
+        gap:10px;
+       
+      }
+      .overlay {
+        position: absolute;
+      
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .hero-text {
+        transform: translate(7vw,15vh);
+      }
+      .location {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #ff4b42;
+
+        height: 10%;
+        width: 55%;
+
+        display: flex;
+        align-items: center;
+
+        font-weight: bold;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .section1 {
+        
+        width: 100%;
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:25px;
+
+        transform: translate(0px, 30px);
+        
+      }
+      .image {
+       
+        width: 80vw;
+        height: 50vh;
+        box-shadow: 0px 0px 10px;
+      }
+            
+      .featured {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      #sea_view{font-size: 40px;}
+      
+      .box {
+        width: 80vw;
+        box-shadow: 0px 0px 5px;
+        display: flex;
+        flex-direction: column;
+       
+        gap: 15px;
+      }
+       
+      .info {
+        width: 80vw;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        align-content: space-around;
+
+        box-shadow: 0px 0px 10px;
+       
+      }
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        transform: translate(0px, 15px);
+      }
+      .section2{
+        height:40vh;
+        width:100%;
+      }
+      .section21 {
+        height: 40vh;
+        width: 100%;
+        background-image: url(./html/video-bg.jpg);
+        transform: translate(0px, 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+      }
+      .view{
+        transform: translate(0px,40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+       align-items: center;
+        row-gap: 10px;
+      }
+      .image1{
+        transform: translate(0px,20px);
+        height:30vh;
+        width:60vw;
+       
+      }
+      .three_box{
+      height:50vh;
+      width:100%;
+      transform:translateY(90px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      }
+      .t_box{
+      height:10vh;
+      width:70vw;
+      background-color: #fa9a95;
+      border:1px solid;
+       border-radius: 20px;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+
+      }
+      .t_col{
+      display:flex;
+      flex-direction: column;
+      gap:5px;}
+      .section3 {
+        width: 100%;
+        height: 85vh;
+        background-color: rgb(253, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 30px;
+        transform: translateY(90px);
+       
+      }
+      .sec31 {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+       
+       
+      }
+      .bestdeal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .button1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+       
+      }
+      .b_button{
+        height:5vh;
+        width:23vw;
+      }
+      .sec32 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: space-around;
+        align-items: center;
+        gap:20px;
+        transform: translateY(20px);
+      }
+      .sec321 {
+        width: 80vw;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        box-shadow: 0px 0px 10px;
+        overflow: hidden;
+        border-radius: 5%;
+      }
+      .item1 {
+        width:80vw;
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+      }
+      .deal_img{
+        height:50vh;
+        width:80vw;
+        border-radius: 5%;
+        box-shadow: 0px 0px 10px;
+      }
+      .text2 {
+        width: 80vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+       
+        justify-content: space-evenly;
+        align-items: start;
+       
+      }
+      .su{
+        height: 4vh;
+        width:50%;
+        border-radius: 40px;
+        display: flex; 
+        gap:15px;
+        align-items: center;
+        background-color: #050404;
+      }
+      .su1{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df150b;
+        border: 1px solid;
+        border-radius: 40px;
+      }
+      .su2{
+        height:100%;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center ;
+      }
+       .section4{
+        height:320vh;
+        width:100%;
+        border:1px solid rgb(255, 255, 255);
+        transform: translate(0px,117vh);
+      }
+      .sec41{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap:10px;
+      }
+      .sec42{
+      transform: translateY(20px);
+      display: flex;
+      background-color: rgb(237, 249, 249);
+      flex-direction: column;
+      gap:30px;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .sec42_1{
+      height:80vh;
+      width:80vw;
+     border-radius: 10px;
+      display:flex;
+      flex-direction: column;
+      align-content: space-around;
+      justify-content: space-around;
+       box-shadow: 0px 0px 20px;
+       gap:1px;
+     
+      
+    }
+    .sec42_11{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    .img4{
+     
+      height:100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .schedule{
+      height: 5vh;
+      width:50%; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    .luxury{
+        height: 4vh;
+        width:30vw;
+        border: 1px solid black; 
+        text-align: center; 
+        background-color: #ff4b42; 
+        border-radius: 50px ; 
+        display: flex;  
+        justify-content: space-around;
+        align-items: center;
+    }
+    .section5{
+      height:80vh;
+      width:100%;
+      transform: translate(0vw,320vh);
+    }
+    .bg_img{
+      height:50%;
+      width:100%;
+      background-image: url(./html/contact-bg.jpg);
+    }
+      
+    .contact{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(5vh);
+    }
+    .f_row{
+      display:flex;
+      width:100%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap:20px;
+      
+    }
+     .f_col{
+
+      display:flex;
+      flex-direction: column;
+      align-content: space-between;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(10vh);
+    }
+     
+    .f_col{
+
+      display:flex;
+      flex-direction: column;
+      align-content: space-between;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(10vh);
+    }
+    .iframe1{
+      height:70vh;
+      width:80vw;
+      border-radius: 10%;
+    }
+    .main_row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* justify-content: space-around; */
+      gap:20px;
+      Width:80vw;
+    }
+    
+    .f_row1{
+      display: flex;
+      width:80vw;
+      height:10vh;
+     justify-content: space-evenly;
+      align-items: center;
+      border: 1px solid beige;
+      gap:10px;
+      box-shadow: 0px 0px 10px;
+      border-radius: 5%;;
+      /* border-radius: 40px; */
+    }
+    .f_col1{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap:4px;
+     
+    }
+    .form1{
+    border:1px solid black;
+    transform: translateY(10vh);
+    height:70vh;
+    width:80vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    box-shadow: 0px 0px 10px;
+    border-radius: 5%;
+    }
+    .input_text{
+      height: 7vh; width:60vw; background-color: rgb(237, 245, 245);  border-radius: 40px;
+    }
+    
+    .schedule1{
+      height: 5vh;
+      width:40vw; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    footer{
+      height:10vh;
+      width:100%;
+      border:1px solid black;
+      transform: translate(0px,435vh);
+      background-color: #201e1e;
+      color: #ece7e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      
+      }
+    @media screen and (min-width:769px) and (max-width:1026px)  {
+      header {
+        width:100%;
+        background-color: white;
+        height: 8vh;
+        transform: translate(0px,7px);
+       overflow: hidden;
+        
+      }
+      
+      .main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap:10px;
+      }
+      .villa{
+        font-size: 30px;
+      }
+      .main1{ 
+       
+        display:flex;
+        align-items: center;
+        gap:50px;
+        font-size: 15px;
+      }
+      .head1{
+        text-decoration: none;
+        color: #050404;
+      }
+      .su_main{ 
+        height: 4vh;
+        width:20vw;
+        border-radius: 40px;
+        display: flex; 
+        gap:5px;
+        align-items: center;
+        background-color: #050404;
+      }
+      .su_1{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df150b;
+        border: 1px solid;
+        border-radius: 40px;
+      }
+      .su_2{
+        height:100%;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center ;
+      }
+      .hero {
+        background-image: url("./html/banner-01.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        width:100%;
+        position: relative;
+        color: white;
+        display: flex; 
+        gap:10px;
+       
+      }
+      .overlay {
+        position: absolute;
+      
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .hero-text {
+        transform: translate(10vw,15vh);
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+      }
+      .location {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #ff4b42;
+
+        height: 10%;
+        width: 50%;
+
+        display: flex;
+         justify-content: center;
+         align-items: center;
+
+        font-weight: bold;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .section1 {
+        
+        width: 100%;
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:25px;
+
+        transform: translate(0px, 30px);
+        
+      }
+      .image {
+       
+        width: 80vw;
+        height: 50vh;
+        box-shadow: 0px 0px 10px;
+      }
+            
+      .featured {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      #sea_view{font-size: 45px;}
+      
+      .box {
+        width: 80vw;
+        box-shadow: 0px 0px 5px;
+        display: flex;
+        flex-direction: column;
+       
+        gap: 15px;
+      }
+       
+      .info {
+        width: 80vw;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        align-content: space-around;
+
+        box-shadow: 0px 0px 10px;
+       
+      }
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        transform: translate(0px, 15px);
+      }
+      .section2{
+        height:40vh;
+        width:100%;
+      }
+      .section21 {
+        height: 40vh;
+        width: 100%;
+        background-image: url(./html/video-bg.jpg);
+        transform: translate(0px, 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+      }
+      .view{
+        transform: translate(0px,40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+       align-items: center;
+        row-gap: 10px;
+      }
+      .image1{
+        transform: translate(0px,20px);
+        height:30vh;
+        width:60vw;
+       
+      }
+      .three_box{
+      height:50vh;
+      width:100%;
+      transform:translateY(90px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      }
+      .t_box{
+      height:10vh;
+      width:70vw;
+      background-color: #fa9a95;
+      border:1px solid;
+       border-radius: 20px;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+
+      }
+      .t_col{
+      display:flex;
+      flex-direction: column;
+      gap:5px;}
+      .section3 {
+        width: 100%;
+        height: 85vh;
+        background-color: rgb(253, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 30px;
+        transform: translateY(90px);
+       
+      }
+      .sec31 {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+       
+       
+      }
+      .bestdeal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .best_deal{font-size: 20px;}
+      .button1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+       
+      }
+      .b_button{
+        height:5vh;
+        width:23vw;
+      }
+      .sec32 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: space-around;
+        align-items: center;
+        gap:20px;
+        transform: translateY(20px);
+      }
+      .sec321 {
+        width: 80vw;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        box-shadow: 0px 0px 10px;
+        overflow: hidden;
+        border-radius: 5%;
+      }
+      .item1 {
+        width:80vw;
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+      }
+      .deal_img{
+        height:50vh;
+        width:80vw;
+        border-radius: 5%;
+        box-shadow: 0px 0px 10px;
+      }
+      .text2 {
+        width: 80vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+       
+        justify-content: space-evenly;
+        align-items: start;
+       
+      }
+      .su{
+        height: 4vh;
+        width:50%;
+        border-radius: 40px;
+        display: flex; 
+        gap:15px;
+        align-items: center;
+        background-color: #050404;
+      }
+      .su1{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df150b;
+        border: 1px solid;
+        border-radius: 40px;
+      }
+      .su2{
+        height:100%;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center ;
+      }
+       .section4{
+        height:75vh;
+        width:100%;
+        border:1px solid rgb(255, 255, 255);
+        transform: translate(0px,117vh);
+      }
+      .sec41{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap:10px;
+      }
+      .sec42{
+      
+      transform: translateY(20px);
+      display: grid;
+      background-color: rgb(237, 249, 249);
+     grid-template-areas: "area1 area2"
+     "area3 area4"
+     "area5 area6";
+     justify-content: space-around;
+     gap:50px;
+      
+      
+    }
+    .property_1{
+      grid-area: area1;
+    
+    }
+    .property_2{
+      grid-area: area2;
+    }
+    .property_3{
+      grid-area: area3;
+    }
+    .property_4{
+      grid-area: area4;
+    }
+    .property_5{
+      grid-area: area5;
+    }
+    .property_6{
+      grid-area: area6;
+    }
+    .sec42_1{
+      height:80vh;
+      width:40vw;
+     border-radius: 10px;
+      display:flex;
+      flex-direction: column;
+      align-content: space-around;
+      justify-content: space-around;
+       box-shadow: 0px 0px 20px;
+       gap:1px;
+     
+      
+    }
+    .sec42_11{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    .img4{
+     
+      height:40vh;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .schedule{
+      height: 5vh;
+      width:50%; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    .luxury{
+        height: 4vh;
+        width:30vw;
+        border: 1px solid black; 
+        text-align: center; 
+        background-color: #ff4b42; 
+        border-radius: 50px ; 
+        display: flex;  
+        justify-content: space-around;
+        align-items: center;
+    }
+    .section5{
+      height:80vh;
+      width:100%;
+      transform: translate(0vw,320vh);
+    }
+    .bg_img{
+      height:50%;
+      width:100%;
+      background-image: url(./html/contact-bg.jpg);
+    }
+      
+    .contact{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(5vh);
+    }
+    .f_row{
+      display:flex;
+      width:100%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap:20px;
+      
+    }
+     .f_col{
+
+      display:flex;
+      flex-direction: column;
+      align-content: space-between;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(10vh);
+    }
+     
+    .f_col{
+
+      display:flex;
+      flex-direction: column;
+      align-content: space-between;
+      align-items: center;
+      gap:2vh;
+      transform: translateY(10vh);
+    }
+    .iframe1{
+      height:70vh;
+      width:80vw;
+      border-radius: 10%;
+    }
+    .main_row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* justify-content: space-around; */
+      gap:20px;
+      Width:80vw;
+    }
+    
+    .f_row1{
+      display: flex;
+      width:80vw;
+      height:10vh;
+     justify-content: space-evenly;
+      align-items: center;
+      border: 1px solid beige;
+      gap:10px;
+      box-shadow: 0px 0px 10px;
+      border-radius: 5%;;
+      /* border-radius: 40px; */
+    }
+    .f_col1{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap:4px;
+     
+    }
+    .form1{
+    border:1px solid black;
+    transform: translateY(10vh);
+    height:70vh;
+    width:80vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    box-shadow: 0px 0px 10px;
+    border-radius: 5%;
+    }
+    .input_text{
+      height: 7vh; width:60vw; background-color: rgb(237, 245, 245);  border-radius: 40px;
+    }
+    
+    .schedule1{
+      height: 5vh;
+      width:40vw; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    footer{
+      height:10vh;
+      width:100%;
+      border:1px solid black;
+      transform: translate(0px,435vh);
+      background-color: #201e1e;
+      color: #ece7e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    }
+    @media screen and (min-width:1027px){
+      header {
+        width:100%;
+        background-color: white;
+        height: 8vh;
+        transform: translate(0px,7px);
+       overflow: hidden;
+        
+      }
+      
+      .main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:50px;
+      }
+      .villa{
+        font-size: 30px;
+      }
+      .main1{ 
+       
+        display:flex;
+        align-items: center;
+        gap:50px;
+        font-size: 15px;
+      }
+      .head1{
+        text-decoration: none;
+        color: #050404;
+      }
+      .su_main{ 
+        height: 4vh;
+        width:20vw;
+        border-radius: 40px;
+        display: flex; 
+        gap:5px;
+        align-items: center;
+        background-color: #050404;
+      }
+      .su_1{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df150b;
+        border: 1px solid;
+        border-radius: 40px;
+      }
+      .su_2{
+        height:100%;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center ;
+      }
+      .hero {
+        background-image: url("./html/banner-01.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        width:100%;
+        position: relative;
+        color: white;
+        display: flex; 
+        gap:10px;
+       
+      }
+      .overlay {
+        position: absolute;
+      
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .hero-text {
+        transform: translate(10vw,10vh);
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+      }
+      .location {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #ff4b42;
+
+        height: 15%;
+        width: 90%;
+
+        display: flex;
+         justify-content: center;
+         align-items: center;
+
+        font-weight: bold;
+      }
+      .hero{
+        font-size: 2.0rem;
+      }
+     #hurry{
+      font-size: 50px;
+     }
+     .section1 {
+        /* height: 100%; */
+        width: 100%;
+        /* margin:20px; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        transform: translate(0px, 30px);
+        /* align-content: space-between; */
+      }
+
+      .image {
+        width: 25vw;
+        height: 50vh;
+        box-shadow: 0px 0px 5px;
+      }
+
+      .featured {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .box {
+        /* border: 1px solid black; */
+        width: 30vw;
+        
+        /* box-shadow: 0px 0px 5px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+        gap: 10px;
+      }
+      .info {
+        width: 25%;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        align-content: space-around;
+
+        box-shadow: 0px 0px 10px;
+        overflow: hidden;
+      }
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        transform: translate(0px, 15px);
+      }
+      .section2{
+        height:80vh;
+        width:100%;
+      }
+      .section21 {
+        height: 50vh;
+        width: 100%;
+        background-image: url(./html/video-bg.jpg);
+        transform: translate(0px, 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+      }
+      .view{
+        transform: translate(0px,100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+       align-items: center;
+        row-gap: 10px;
+        font-size: larger;
+      }
+      .image1{
+        transform: translate(0px,100px);
+        height:50vh;
+       
+      }
+      .three_box{
+      height:20vh;
+      width:100%;
+      transform:translateY(70px);
+      display: flex;
+      justify-content: space-evenly;
+      }
+      .t_box{
+      height:10vh;
+      width:20vw;
+      background-color: #fa9a95;
+      border:1px solid;
+       border-radius: 20px;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+
+      }
+      .t_col{
+      display:flex;
+      flex-direction: column;
+      gap:5px;}
+      .section3 {
+        width: 100%;
+        height: 75vh;
+        background-color: rgb(253, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 30px;
+        transform: translateY(40px);
+       
+      }
+      .sec31 {
+        display: flex;
+        justify-content: space-around;
+        gap:20px;
+       
+       
+      }
+      .bestdeal{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+      }
+      .best_deal{font-size: 20px;}
+
+      #right_now{
+        font-size: 160px;
+      }
+      .button1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+       
+      }
+      .b_button{
+        height:5vh;
+        width:10vw;
+      }
+      .sec32 {
+        display: flex;
+       
+        justify-content: space-evenly;
+       
+        align-items: center;
+        gap:10px;
+       
+      }
+      .sec321 {
+        width: 25vw;
+        height: 50vh;
+        border: 1px solid rgb(240, 235, 235);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        box-shadow: 0px 0px 10px;
+        overflow: hidden;
+        border-radius: 5%;
+      }
+      .item1 {
+       
+        display: flex;
+       
+        justify-content: space-around;
+      }
+      .deal_img{
+        height:50vh;
+        width:25vw;
+        border-radius: 5%;
+        box-shadow: 0px 0px 10px;
+      }
+      .text2 {
+        width: 25vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+       
+        justify-content: space-between;
+        align-items: start;
+       
+      }
+      .su{
+        height: 4vh;
+        width:20vw;
+        border-radius: 40px;
+        display: flex; 
+        gap:15px;
+        align-items: center;
+        background-color: #050404;
+      }
+      .su1{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df150b;
+        border: 1px solid;
+        border-radius: 40px;
+      }
+      .su2{
+        height:100%;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center ;
+      }
+      .section4{
+        height:75vh;
+        width:100%;
+        border:1px solid rgb(255, 255, 255);
+        transform: translateY(8vh);
+      }
+      .sec41{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap:20px;
+      }
+      #the_best{
+        font-size: 40px;
+      }
+      #you_like{ font-size: 40px;}
+      .sec42{
+      
+      transform: translateY(20px);
+      display: grid;
+      background-color: rgb(237, 249, 249);
+     grid-template-areas: "area1 area2 area3"
+     "area4 area5 area6";
+     justify-content: space-around;
+     gap:30px;
+      
+      
+    }
+    .property_1{
+      grid-area: area1;
+    
+    }
+    .property_2{
+      grid-area: area2;
+    }
+    .property_3{
+      grid-area: area3;
+    }
+    .property_4{
+      grid-area: area4;
+    }
+    .property_5{
+      grid-area: area5;
+    }
+    .property_6{
+      grid-area: area6;
+    }
+    .sec42_1{
+      height:70vh;
+      width:25vw;
+     border-radius: 10px;
+      display:flex;
+      flex-direction: column;
+      align-content: space-around;
+      justify-content: space-around;
+       box-shadow: 0px 0px 20px;
+       gap:10px;
+     
+      
+    }
+    .sec42_11{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    .img4{
+     
+      height:30vh;
+      width:100%;
+      border-radius: 10px;
+    }
+    .schedule{
+      height: 5vh;
+      width:50%; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    .luxury{
+        height: 4vh;
+        width:50%;
+        border: 1px solid black; 
+        text-align: center; 
+        background-color: #ff4b42; 
+        border-radius: 50px ; 
+        display: flex;  
+        justify-content: space-around;
+        align-items: center;
+    }
+    .section5{
+      height:80vh;
+      width:100%;
+      /* border:1px solid black; */
+      transform: translate(0vw,108vh);
+    }
+    .bg_img{
+      height:50%;
+      width:100%;
+      background-image: url(./html/contact-bg.jpg);
+
+    }
+    .contact{
+      display:flex;
+      flex-direction: column;
+      
+      align-items: center;
+      gap:2vh;
+      transform: translateY(5vh);
+    }
+    .f_row{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      
+    }
+    .f_col{
+      display:flex;
+      flex-direction: column;
+      align-content: space-between;
+      gap:2vh;
+      transform: translateY(10vh);
+    }
+    .iframe1{
+      height:70vh;
+      width:40vw;
+      border-radius: 10%;
+    }
+    .f_row1{
+      display: flex;
+
+      justify-content: space-between;
+      gap:10px;
+    }
+    .f_col1{
+      display: flex;
+      flex-direction: column;
+      align-content: space-evenly;
+      gap:7px;
+    }
+    .main_row{
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      Width:40vw;
+      height:8vh;
+    }
+    .form1{
+    border:1px solid black;
+    transform: translateY(10vh);
+    height:80vh;
+    width:40vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+   
+    box-shadow: 0px 0px 10px;
+    border-radius: 5%;
+    }
+    .input_text{
+      height: 7vh; width:30vw; background-color: rgb(237, 245, 245);  border-radius: 40px;
+    }
+    .schedule1{
+      height: 5vh;
+      width:15vw; 
+      border: 1px solid black;
+      border-radius: 40px;
+      display: flex; 
+      align-items: center; 
+      justify-content:center; 
+      text-decoration: none; 
+      color: #ece7e7; 
+      background-color:black ;
+    }
+    footer{
+      height:10vh;
+      width:100%;
+      border:1px solid black;
+      transform: translate(0px,145vh);
+      background-color: #201e1e;
+      color: #ece7e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+
+    }
+
+    }
+     
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="main">
+      <div class="villa"><h2><b>VILLA</b></h2></div>
+      <div class="main1"><div ><a href="#" style="text-decoration: none; color: #db1b11;">Home</a></div>
+      <div ><a href="#" class="head1">Properties</a></div>
+      <div ><a href="#" class="head1">property_details</a></div>
+      <div ><a href="#" class="head1">Contact_US</a></div>
+      <div class="su_main">
+        <div class="su_1"><ion-icon style="color: white;" name="calendar-clear"></ion-icon></div>
+        <div class="su_2" style="color: aliceblue;"><a href="#" style="text-decoration:none ; color: aliceblue;">Schedule a visit &emsp;</a></div></div></div>
+      </div>
+      </div>
+      </div>
+     
+    </header>
+    <section class="hero">
+      <div class="overlay"></div>
+
+      <div class="hero-text">
+        <div class="location">
+          <div style="color: #080606">Toronto,</div>
+          Canada
+        </div>
+        <h1 id="hurry">
+          HURRY!<br />
+          GET THE BEST<br />
+          VILLA FOR YOU
+        </h1>
+      </div>
+    </section>
+    <section class="section1">
+      <div class="container">
+        <img src="./html/banner2.jpeg" alt="Living Room" class="image" />
+        
+      </div>
+      <div class="featured">
+        <div>
+          <div style="color: #db1b11">|FEATURED</div>
+          <div  id="sea_view">
+            Best<br />appartment &<br />Sea view
+          </div>
+        </div>
+        <div class="box">
+          <div style="color: #ff4b42;">Best usefull links?</div>
+          <hr />
+          <div>
+            Get <b>the best villa</b> website template in HTML CSS and Bootstrap
+            for your business. TemplateMo provides you the
+            <h4 style="color: darkcyan">best free CSS templates</h4>
+            in the world. Please tell your friends about it.
+          </div>
+          <hr />
+          <div>
+            <a href="#" style="text-decoration: none; color: #050404"
+              >How does it work?</a
+            >
+          </div>
+          <hr />
+          <div>
+            <a href="#" style="text-decoration: none; color: #050404"
+              >Why is villa agency the best?</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="item">
+          <div><img src="./html/icon1.png" /></div>
+          <div>
+            <h1>250 m2</h1>
+            <h6>Total Flat Space</h6>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <div class="item">
+          <div><img src="./html/icon2.png" /></div>
+          <div>
+            <h1>Contract</h1>
+            <h6>Contract Ready</h6>
+          </div>
+        </div>
+        <br />
+
+        <hr />
+        <div class="item">
+          <div><img src="./html/icon3.png" /></div>
+          <div>
+            <h1>Payment</h1>
+            <h6>Payment Process</h6>
+          </div>
+        </div>
+        <br />
+
+        <hr />
+
+        <div class="item">
+          <div><img src="./html/icon4.png" /></div>
+          <div>
+            <h1>Safety</h1>
+            <h6>24/7 Under Control</h6>
+          </div>
+        </div>
+        <br />
+      </div>
+    </section>
+   <section class="section2" >
+    <div class="section21">
+      <div class="view">
+        <h6 style="color: #db1b11">| Video View</h6>
+        <h1 style="color: aliceblue">Get Closer View &<br> Different Feeling</h1>
+      </div>
+      <br /><br />
+      <div>
+        <img src="./html/video-frame.jpg" class="image1" />
+      </div>
+      </div>
+    </section>
+    <div class="three_box"><div class="t_box"><div style="color: #db1b11; font-size: 30px;">34</div>
+    <div class="t_col"><div><b> Buildings</b></div>
+    <div><b>Finished Now</b>
+</div>
+    </div></div>
+   <div class="t_box"><div style="color: #db1b11; font-size: 30px;">12</div>
+    <div class="t_col"><div><b> Years</b></div>
+    <div><b>Experience</b>
+</div>
+    </div></div>
+    <div class="t_box"><div style="color: #db1b11; font-size: 30px;">24</div>
+    <div class="t_col"><div><b> Awwards</b></div>
+    <div><b>Won 2023</b>
+</div>
+    </div></div></div>
+    <section class="section3">
+      <div class="sec31">
+        <div class="bestdeal">
+          <h6 style="color: #db1b11" class="best_deal1">| Best Deal</h6>
+          <br />
+          <h1 style="font-size: 30px" id="right_now">
+            Find Your Best Deal<br />
+            Right Now!
+          </h1>
+        </div>
+        <form>
+          <div class="button1">
+            <div>
+              <button
+                style="
+                  background-color: #db1b11;
+                  color: aliceblue;
+                "
+                type="submit"
+                class="b_button"
+              >
+                Appartment
+              </button>
+            </div>
+            <div>
+              <button
+                style="
+                  background-color: #0d0c0c;
+                  color: aliceblue;
+                  
+                "
+                type="submit"
+                class="b_button"
+              >
+                Villa house
+              </button>
+            </div>
+            <div>
+              <button
+                style="
+                  background-color: #0d0c0c;
+                  color: aliceblue;
+                "
+                type="submit"
+                class="b_button"
+              >
+                Form House
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="sec32">
+        <div class="sec321">
+          <div class="item1">
+            <h5>Total Flat Space</h5>
+            <h1>185 m2</h1>
+          </div>
+          <hr />
+          <div class="item1">
+            <h5>Floor number</h5>
+            <h1>26th</h1>
+          </div>
+          <hr />
+          <div class="item1">
+            <h5>Number of rooms</h5>
+            <h1>4</h1>
+          </div>
+          <hr />
+          <div class="item1">
+            <h5>Parking Available</h5>
+            <h1>Yes</h1>
+          </div>
+          <hr />
+          <div class="item1">
+            <h5>Payment Process</h5>
+            <h1>Bank</h1>
+          </div>
+        </div>
+        <div>
+          <img
+            src="./html/deal-01.jpg" class="deal_img"/>
+        </div>
+        <div class="text2">
+          <div>
+            <h3 style="font-size: larger">Extra Info About Property</h3>
+          </div>
+          <div>
+            <h5 style="font-size: medium">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, do
+              eiusmod tempor pack incididunt ut labore et dolore magna aliqua
+              quised ipsum suspendisse.
+            </h5>
+          </div>
+          <div>
+            <h5 style="font-size: medium">
+              When you need free CSS templates, you can simply type TemplateMo
+              in any search engine website. In addition, you can type TemplateMo
+              Portfolio, TemplateMo One Page Layouts, etc.
+            </h5>
+          </div>
+          <div class="su">
+              <div class="su1"><ion-icon style="color: white;" name="calendar-clear"></ion-icon></div>
+              <div class="su2" style="color: aliceblue;">Schedule a visit</div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section4">
+
+        <div class="sec41"><div style="color: #df150b;">| Properties</div>
+        <div><h1 id="the_best">We Provide The Best</h1></div>
+        <div><h1 id="you_like">Property You Like</h1></div></div>
+      <div class="sec42">  
+        <div class="sec42_1 property_1" style="overflow: hidden;">
+          <div><a href="#"><img src="./html/property-01.jpg" class="img4" /></a></div>
+          <div class="sec42_11"><div class="luxury">Luxury villa</div>
+          <div style="color: #db1b11; font-size: large;">$2.264.000</div></div>
+          <div><a href="#" style="text-decoration: none; color: #050404; font-size: small;"><h3>18 New Street Miami, OR 97219</h3></a></div>
+          <div style="display: flex; gap:30px; overflow: hidden;"><div>Bedrooms: <b>8</b></div>
+          <div>Bathrooms: <b>8</b></div></div>
+          <div style="display: flex; justify-content: space-between">
+            <div>Area: <b>545m2</b></div>
+            <div> Floor: <b>3</b></div>
+            <div>Parking: <b>6 spots</b></div>
+          </div>
+          <hr>
+          
+          <center><div><a href="#" class="schedule">Schedule a visit</a></div></center>
+        
+        
+        </div>
+        
+          <div class="sec42_1 property_2" style="overflow: hidden;">
+            <div><a href="#"><img src="./html/property-02.jpg" class="img4" /></a></div>
+            <div class="sec42_11"><div class="luxury">Luxury villa</div>
+            <div style="color: #db1b11; font-size: large;">$1.180.000</div></div>
+            <div><a href="#" style="text-decoration: none; color: #050404; font-size:small;"><h3>54 Mid Street Florida, OR 27001</h3></a></div>
+            <div style="display: flex; gap:30px; overflow: hidden;"><div>Bedrooms: <b>6</b></div>
+            <div>Bathrooms:<b> 5</b></div></div>
+            <div style="display: flex; justify-content: space-between">
+              <div>Area: <b>450m2</b></div>
+              <div> Floor: <b>3</b></div>
+              <div>Parking: <b>8 spots</b></div>
+            </div>
+            <hr>
+            
+            <center><div><a href="#" class="schedule">Schedule a visit</a></div></center>
+          
+          
+          </div>
+            
+            <div class="sec42_1 property_3" style="overflow: hidden;">
+              <div><a href="#"><img src="./html/property-03.jpg" class="img4" /></a></div>
+              <div class="sec42_11"><div class="luxury">Luxury villa</div>
+              <div style="color: #db1b11; font-size: large;">$1.460.000</div></div>
+              <div><a href="#" style="text-decoration: none; color: #050404; font-size: small;"><h3>26 Old Street Miami, OR 38540</h3></a></div>
+              <div style="display: flex; gap:30px; overflow: hidden;"><div>Bedrooms: <b>5</b></div>
+              <div>Bathrooms: <b>4</b></div></div>
+              <div style="display: flex; justify-content: space-between">
+                <div>Area: <b>225m2</b></div>
+                <div> Floor: <b>3</b></div>
+                <div>Parking: <b>10 spots</b></div>
+              </div>
+              <hr>
+              
+              <center><div><a href="#" class="schedule">Schedule a visit</a></div></center>
+            
+            
+            </div>
+            <div class="sec42_1 property_4" style="overflow: hidden;">
+              <div><a href="#"><img src="./html/property-04.jpg" class="img4" /></a></div>
+              <div class="sec42_11"><div class="luxury">Apartment</div>
+              <div style="color: #db1b11; font-size: large;">$584.500</div></div>
+              <div><a href="#" style="text-decoration: none; color: #050404; font-size: small;"><h3>12 New Street Miami, OR 12650</h3></a></div>
+              <div style="display: flex; gap:30px; overflow: hidden;"><div>Bedrooms: <b>4</b></div>
+              <div>Bathrooms: <b>3</b></div></div>
+              <div style="display: flex; justify-content: space-between">
+                <div>Area: <b>125m2</b></div>
+                <div> Floor: <b>25th</b></div>
+                <div>Parking: <b>2 cars</b></div>
+              </div>
+              <hr>
+              
+              <center><div><a href="#" class="schedule">Schedule a visit</a></div></center>
+            
+            
+            </div>
+            <div class="sec42_1 property_5" style="overflow: hidden;">
+              <div><a href="#"><img src="./html/property-05.jpg" class="img4" /></a></div>
+              <div class="sec42_11"><div class="luxury">Penthouse</div>
+              <div style="color: #db1b11; font-size: large;">$925.600</div></div>
+              <div><a href="#" style="text-decoration: none; color: #050404; font-size: small;"><h3>34 Beach Street Miami, OR 42680</h3></a></div>
+              <div style="display: flex; gap:30px; overflow: hidden;"><div>Bedrooms: <b>4</b></div>
+              <div>Bathrooms: <b>4</b></div></div>
+              <div style="display: flex; justify-content: space-between">
+                <div>Area: <b>180m2</b></div>
+                <div> Floor: <b>38th</b></div>
+                <div>Parking: <b>2 cars</b></div>
+              </div>
+              <hr>
+              
+              <center><div><a href="#" class="schedule">Schedule a visit</a></div></center>
+            
+            
+            </div>
+            <div class="sec42_1 property_6" style="overflow: hidden;">
+              <div><a href="#"><img src="./html/property-06.jpg" class="img4" /></a></div>
+              <div class="sec42_11"><div class="luxury">Modern Condo</div>
+              <div style="color: #db1b11; font-size: large;">$450.000 </div></div>
+              <div><a href="#" style="text-decoration: none; color: #050404; font-size: small;"><h3>22 New Street Portland, OR 16540
+              </h3></a></div>
+              <div style="display: flex; gap:30px; overflow: hidden;"><div>Bedrooms: <b>3</b></div>
+              <div>Bathrooms: <b>2</b></div></div>
+              <div style="display: flex; justify-content: space-between">
+                <div>Area: <b>165m2</b></div>
+                <div> Floor: <b>26th</b></div>
+                <div>Parking: <b>3 cars</b></div>
+              </div>
+              <hr>
+              
+              <center><div><a href="#" class="schedule">Schedule a visit</a></div></center>
+            
+            
+            </div>
+
+            
+        
+        
+      </div>
+    </section>
+    <section class="section5">
+      <div class="bg_img">
+        <div class="contact"><div style="color: #db1b11;">| Contact Us</div>
+        <div style="font-size: large; color: #ece7e7;">Get In Touch With</div>
+        <div style="font-size: large; color: #ece7e7;">Our Agents</div></div>
+     
+      
+        <div class="f_row">
+           <div class="f_col">
+            <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109135.49133634624!2d-80.1379594525937!3d25.934694375718212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9acfee073549d%3A0xf4e74db7a5da487a!2sSunny%20Isles%20Beach%2C%20FL%2033160%2C%20USA!5e1!3m2!1sen!2sin!4v1727464815945!5m2!1sen!2sin"   style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe1"></iframe></div>
+           <div class="main_row" >
+            <div class="f_row1"><div><img src="./html/phone-icon.png" height="90%" /></div>
+            <div class="f_col1"><div><b>010-020-0340</b></div>
+            <div>Phone Number</div></div>
+          </div>
+          <div class="f_row1"><div><img src="./html/email-icon.png" height="70%" /></div>
+            <div class="f_col1"><div><b>info@villa.co</b></div>
+            <div>Business Email</div></div>
+          </div>
+         
+           </div>
+        </div>
+        <div class="form1">
+         <div> <label><b>Full Name</b></label></div>
+          <div> <input type="text"  required class="input_text" placeholder="Your name....." ></div>
+          <div><label><b>Email Address</b></label></div>
+          <div><input type="text"  required  class="input_text"  placeholder="Your E-mail....." ></div>
+          <div><label><b>Subject</b></label></div>
+          <div><input type="text"  required  class="input_text" placeholder="Subject...." ></div>
+          <div><label><b>Message</b></label></div>
+
+          <div><input type="text"  required class="input_text"  placeholder="Your message..."  ></div><br>
+          <div><a href="#" class="schedule1">Send a message</a></div>
+          
+        </div>
+       </div>
+      </div>
+    </section>
+    <footer>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. Design: TemplateMo Distribution: ThemeWagon</footer>
+    
+  </body>
+</html>
+
